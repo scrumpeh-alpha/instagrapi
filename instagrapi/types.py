@@ -304,8 +304,8 @@ class ClipsIgArtist(TypesBaseModel):
     full_name: str
     is_private: bool = False
     is_verified: bool = False
-    profile_pic_id: str
-    profile_pic_url: str
+    profile_pic_id: Optional[str] = None
+    profile_pic_url: Optional[str] = None
     strong_id__: str
 
 
@@ -373,7 +373,7 @@ class ClipsMetadata(TypesBaseModel):
     external_media_info: Optional[dict] = None
     is_fan_club_promo_video: bool = False
     is_shared_to_fb: bool = False
-    mashup_info: ClipsMashupInfo
+    mashup_info: Optional[ClipsMashupInfo] = None
     merchandising_pill_info: Optional[dict] = None
     music_canonical_id: str
     music_info: Optional[dict] = None
